@@ -1,6 +1,8 @@
 # Fintess-pro
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Прошу обратить ваше внимание, что в данном проекте, для стилизации компонентов, мы будем использовать подход
+
+Styled Components, который использовали в курсовой работе по Music-app
 
 ## Проект командной разработки
 
