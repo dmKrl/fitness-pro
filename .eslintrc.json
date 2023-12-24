@@ -3,6 +3,7 @@
         "browser": true,
         "es2021": true
     },
+    "root": true,
     "extends": [
         "plugin:react/recommended",
         "airbnb",
@@ -28,7 +29,6 @@
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "react/prop-types": "false",
         "react/destructuring-assignment": [0],
-        // ...
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn"
     }
