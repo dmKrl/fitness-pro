@@ -47,7 +47,7 @@ body {
   height: 100%;
   font-family: 'StratosSkyeng', sans-serif;
   color: #black;
-  background-color: #fff;
+  background: #FAFAFA;
 }
 `;
 
