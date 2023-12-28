@@ -4,17 +4,18 @@ import data from '../../data.json';
 import Fitting from '../Fitting/Fitting';
 import Directions from '../Directions/Directions';
 import BannerConnection from '../BannerConnection/BannerConnection';
+import * as S from './DescriptionCourse.style';
 
 function DescriptionCourse() {
     return (
-        <div>
+        <S.ContainerDecription>
             <Logo />
             <BannerCourse />
             <Fitting />
             <Directions />
             <p>{data.courses.ab1c3f.description}</p>
             <BannerConnection />
-        </div>
+        </S.ContainerDecription>
     );
 }
 

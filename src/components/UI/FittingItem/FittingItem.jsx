@@ -1,10 +1,12 @@
+import * as S from '../../Fitting/Fitting.style';
+
 function FittingItem(props) {
     const { num, fit } = props;
     return (
-        <div>
+        <S.BlockFittingItem>
             <img src={num} alt="" />
             <span>{fit}</span>
-        </div>
+        </S.BlockFittingItem>
     );
 }
 

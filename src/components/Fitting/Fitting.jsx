@@ -1,14 +1,17 @@
 import FittingItem from '../UI/FittingItem/FittingItem';
 import data from '../../data.json';
+import * as S from './Fitting.style';
 
 function Fitting() {
     return (
-        <div>
-            Подойдёт для вас, если:
-            {data.courses.ab1c3f.fitting.map((fit) => {
-                return <FittingItem fit={fit} />;
-            })}
-        </div>
+        <S.BlockFitting>
+            <h2>Подойдёт для вас, если:</h2>
+            <S.BlockFittingItems>
+                {data.courses.ab1c3f.fitting.map((fit) => {
+                    return <FittingItem fit={fit} />;
+                })}
+            </S.BlockFittingItems>
+        </S.BlockFitting>
     );
 }
 

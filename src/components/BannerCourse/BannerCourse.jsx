@@ -1,8 +1,10 @@
+import * as S from './BannerCourse.style';
+
 function BannerCourse() {
     return (
-        <div>
-            <h1>Йога</h1>
-        </div>
+        <S.BlockBannerCourse>
+            <S.BannerTitle>Йога</S.BannerTitle>
+        </S.BlockBannerCourse>
     );
 }
 

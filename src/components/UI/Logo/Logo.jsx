@@ -4,11 +4,9 @@ function Logo() {
     return (
         <div>
             <Link to="/">
-                <img
-                    src="/public/image/logo.png"
-                    alt="logo"
-                    style={{ width: '220px', height: '35px' }}
-                />
+                <svg style={{ width: '135px', height: '20px' }}>
+                    <use xlinkHref="/image/icon/sprite.svg#icon-logo" />
+                </svg>
             </Link>
         </div>
     );
