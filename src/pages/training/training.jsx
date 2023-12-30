@@ -5,9 +5,9 @@ import {
     ProgressBarSecond,
     ProgressBarThird,
 } from '../../components/ProgressBar/ProgressBar';
-// import MyResults from '../components/MyProgress/MyProgress';
-// import SelectingWorkout from '../components/SelectingWorkout/SelectingWorkout';
-// import AcceptProgress from '../components/AcceptProgress/AcceptProgress';
+import MyResults from '../components/MyProgress/MyProgress';
+import SelectingWorkout from '../components/SelectingWorkout/SelectingWorkout';
+import AcceptProgress from '../components/AcceptProgress/AcceptProgress';
 
 export default function Training() {
     return (
@@ -87,9 +87,9 @@ export default function Training() {
                     </S.TrainingProgress>
                 </S.Sections>
             </S.MainTraining>
-            {/* <AcceptProgress />
+            <AcceptProgress />
             <SelectingWorkout />
-            <MyResults /> */}
+            <MyResults />
         </S.Container>
     );
 }
