@@ -1,16 +1,17 @@
 import ButtonForFetch from '../UI/ButtonForFetch/ButtonForFetch';
+import * as S from './BannerConnection.style';
 
 function BannerConnection() {
     return (
-        <div>
-            <p>
+        <S.BannerConnectionContainer>
+            <S.BannerConnectionText>
                 Оставьте заявку на пробное занятие, мы свяжемся с вами, поможем
                 с выбором направления и тренера, с которым тренировки принесут
                 здоровье и радость!
-            </p>
+            </S.BannerConnectionText>
             <ButtonForFetch>Записаться на тренировку</ButtonForFetch>
-            <img src="/public/image/HandPhone.svg" alt="" />
-        </div>
+            <S.BannerImagePhone src="/image/icon/HandPhone.svg" alt="" />
+        </S.BannerConnectionContainer>
     );
 }
 

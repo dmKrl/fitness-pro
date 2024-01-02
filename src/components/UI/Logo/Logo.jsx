@@ -1,14 +1,13 @@
 import { Link } from 'react-router-dom';
+import * as S from './Logo.style';
 
 function Logo() {
     return (
-        <div>
+        <S.BlockLogo>
             <Link to="/">
-                <svg style={{ width: '135px', height: '20px' }}>
-                    <use xlinkHref="/image/icon/sprite.svg#icon-logo" />
-                </svg>
+                <S.LogoImage src="/image/logo.png" />
             </Link>
-        </div>
+        </S.BlockLogo>
     );
 }
 

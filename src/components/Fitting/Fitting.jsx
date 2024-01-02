@@ -5,7 +5,7 @@ import * as S from './Fitting.style';
 function Fitting() {
     return (
         <S.BlockFitting>
-            <h2>Подойдёт для вас, если:</h2>
+            <S.TittleFitting>Подойдёт для вас, если:</S.TittleFitting>
             <S.BlockFittingItems>
                 {data.courses.ab1c3f.fitting.map((fit) => {
                     return <FittingItem fit={fit} />;

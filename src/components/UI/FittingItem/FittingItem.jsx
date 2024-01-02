@@ -1,11 +1,10 @@
 import * as S from '../../Fitting/Fitting.style';
 
-function FittingItem(props) {
-    const { num, fit } = props;
+function FittingItem({ fit }) {
     return (
         <S.BlockFittingItem>
-            <img src={num} alt="" />
-            <span>{fit}</span>
+            <S.FittingItemText>{fit.text}</S.FittingItemText>
+            <img src={fit.number} alt="" />
         </S.BlockFittingItem>
     );
 }

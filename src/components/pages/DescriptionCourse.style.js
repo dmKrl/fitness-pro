@@ -1,14 +1,6 @@
 import styled from 'styled-components';
 
-// const BtnIcon = css`
-//     :hover svg {
-//         fill: transparent;
-//         stroke: #acacac;
-//         cursor: pointer;
-//     }
-// `;
-
-export const ContainerDecription = styled.div`
+export const ContainerDescription = styled.div`
     margin: 0px auto;
     color: #000;
     max-width: 1160px;
@@ -16,8 +8,8 @@ export const ContainerDecription = styled.div`
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 32px; /* 133.333% */
+    line-height: 32px;
 `;
-export const ContainerDecription1 = styled.div`
-    padding: 0 140px;
+export const TextDescriptionCourse = styled.p`
+    margin: 75px 0;
 `;
