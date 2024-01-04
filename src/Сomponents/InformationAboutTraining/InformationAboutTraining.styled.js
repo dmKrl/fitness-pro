@@ -1,0 +1,13 @@
+import styled from 'styled-components';
+
+export const InformationAboutTraining = styled.div`
+padding-top: 35px;
+`;
+
+export const ItemSpan = styled.span`
+font-family: 'StratosSkyeng', sans-serif;
+font-weight: 400;
+font-size: 23px;
+color: #FFFFFF;
+opacity: 0.5;
+`;
