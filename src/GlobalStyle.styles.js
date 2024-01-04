@@ -3,7 +3,9 @@ import { createGlobalStyle, css } from 'styled-components';
 const FontFaces = css`
     @font-face {
         font-family: 'StratosSkyeng';
-        src: local('StratosSkyeng'), local('StratosSkyeng'),
+        src:
+            local('StratosSkyeng'),
+            local('StratosSkyeng'),
             url("..public/fonts/StratosSkyeng.woff2') format('woff2"),
             url("../fonts/StratosSkyeng.woff') format('woff");
         font-weight: 400;
@@ -34,6 +36,9 @@ button {
   cursor: pointer;
 }
 
+ul li {
+  list-style: none;
+}
 ${FontFaces}
 
 html,
