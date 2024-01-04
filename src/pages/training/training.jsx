@@ -5,9 +5,9 @@ import {
     ProgressBarSecond,
     ProgressBarThird,
 } from '../../components/ProgressBar/ProgressBar';
-import MyResults from '../components/MyProgress/MyProgress';
-import SelectingWorkout from '../components/SelectingWorkout/SelectingWorkout';
-import AcceptProgress from '../components/AcceptProgress/AcceptProgress';
+import MyResults from '../../components/MyProgress/MyProgress';
+import SelectingWorkout from '../../components/SelectingWorkout/SelectingWorkout';
+import AcceptProgress from '../../components/AcceptProgress/AcceptProgress';
 
 export default function Training() {
     return (

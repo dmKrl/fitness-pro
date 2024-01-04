@@ -6,8 +6,8 @@ const FontFaces = css`
         src:
             local('StratosSkyeng'),
             local('StratosSkyeng'),
-            url('../fonts/StratosSkyeng.woff2') format('woff2'),
-            url('../fonts/StratosSkyeng.woff') format('woff');
+            url("../fonts/StratosSkyeng.woff2') format('woff2"),
+            url("../fonts/StratosSkyeng.woff') format('woff");
         font-weight: 400;
         font-style: normal;
     }
@@ -48,6 +48,7 @@ body {
   font-family: 'StratosSkyeng', sans-serif;
   color: #black;
   background-color: #fff;
+  scroll-behavior: smooth;
 }
 `;
 
