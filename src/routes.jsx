@@ -1,12 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
-import DescriptionCourse from './components/pages/DescriptionCourse';
+import MainPage from './Pages/MainPage';
 
 function AppRoutes() {
     return (
         <Routes>
             <Route path="/" element />
+            <Route path="/MainPage" element={<MainPage />} />
             <Route path="/" element />
-            <Route path="/descriptionCourse" element={<DescriptionCourse />} />
             <Route path="/" element />
             <Route path="/" element />
         </Routes>

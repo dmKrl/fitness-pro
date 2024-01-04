@@ -3,11 +3,9 @@ import { createGlobalStyle, css } from 'styled-components';
 const FontFaces = css`
     @font-face {
         font-family: 'StratosSkyeng';
-        src:
-            local('StratosSkyeng'),
-            local('StratosSkyeng'),
-            url('../fonts/StratosSkyeng.woff2') format('woff2'),
-            url('../fonts/StratosSkyeng.woff') format('woff');
+        src: local('StratosSkyeng'), local('StratosSkyeng'),
+            url("..public/fonts/StratosSkyeng.woff2') format('woff2"),
+            url("../fonts/StratosSkyeng.woff') format('woff");
         font-weight: 400;
         font-style: normal;
     }
@@ -44,7 +42,8 @@ body {
   height: 100%;
   font-family: 'StratosSkyeng', sans-serif;
   color: #black;
-  background: #FAFAFA;
+  background-color: #fff;
+  scroll-behavior: smooth;
 }
 `;
 
