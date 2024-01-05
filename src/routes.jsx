@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import MainPage from './Pages/MainPage';
 
-const AppRoutes = () => {
+function AppRoutes() {
     return (
         <Routes>
             <Route path="/" />
@@ -11,6 +11,6 @@ const AppRoutes = () => {
             <Route path="/" element />
         </Routes>
     );
-};
+}
 
 export default AppRoutes;
