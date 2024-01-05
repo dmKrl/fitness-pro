@@ -1,14 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
-import Training from './pages/training/training';
+import MainPage from './Pages/MainPage';
 
 const AppRoutes = () => {
     return (
         <Routes>
             <Route path="/" />
+            <Route path="/MainPage" element={<MainPage />} />
             <Route path="/" element />
             <Route path="/" element />
             <Route path="/" element />
-            <Route path="/training" element={<Training />} />
         </Routes>
     );
 };
