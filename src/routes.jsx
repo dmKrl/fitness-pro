@@ -1,10 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
-import { AuthPage } from './pages/AuthPage/AuthPage';
+import MainPage from './Pages/MainPage';
 
 function AppRoutes() {
     return (
         <Routes>
-            <Route path="/" element={<AuthPage />} />
+            <Route path="/" element={<MainPage />} />
             <Route path="/" element />
             <Route path="/" element />
             <Route path="/" element />

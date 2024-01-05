@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import * as S from './AuthPage.styles';
+import * as S from './MainPage.styles';
 
 // eslint-disable-next-line import/prefer-default-export
-export function AuthPage() {
+function MainPage() {
     const [error, setError] = useState(null);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -108,3 +108,4 @@ export function AuthPage() {
         </S.PageContainer>
     );
 }
+export default MainPage;
