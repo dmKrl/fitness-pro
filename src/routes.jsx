@@ -4,8 +4,8 @@ import MainPage from './Pages/MainPage';
 function AppRoutes() {
     return (
         <Routes>
-            <Route path="/" element={<MainPage />} />
-            <Route path="/" element />
+            <Route path="/" />
+            <Route path="/MainPage" element={<MainPage />} />
             <Route path="/" element />
             <Route path="/" element />
             <Route path="/" element />
