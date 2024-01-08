@@ -1,4 +1,4 @@
-import ButtonStyled from './ButtonForFetch.style';
+import ButtonStyled from './ButtonForChange.style';
 
 function ButtonForFetch(props) {
     return <ButtonStyled type="button">{props.children}</ButtonStyled>;

@@ -1,4 +1,4 @@
-import Logo from '../UI/Logo/Logo';
+import Logo from '../UI/Logo/LogoMyProfile';
 import UserLogo from '../UI/UserLogo/UserLogo';
 
 export default function Header() {

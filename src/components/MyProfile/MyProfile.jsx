@@ -1,4 +1,4 @@
-import ButtonForFetch from '../UI/ButtonForFetch/ButtonForFetch';
+import ButtonForFetch from '../UI/ButtonForChange/ButtonForChange';
 import * as S from './MyProfile.style';
 
 function MyProfile(props) {

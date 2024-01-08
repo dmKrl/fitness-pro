@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import * as S from './ChangePassword.styles';
-import Logo from '../../UI/Logo/Logo';
+import Logo from '../../UI/Logo/LogoMyProfile';
 
 export default function ChangeLoginPassword(props) {
     const { setActivePopUp } = props;
