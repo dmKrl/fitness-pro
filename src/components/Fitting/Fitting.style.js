@@ -18,7 +18,7 @@ export const BlockFittingItem = styled.div`
 export const FittingItemText = styled.p`
     color: #000;
     font-variant-numeric: lining-nums proportional-nums;
-    font-family: StratosSkyeng;
+    font-family: StratosSkyeng, sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -27,7 +27,7 @@ export const FittingItemText = styled.p`
 export const TittleFitting = styled.div`
     color: #000;
     font-variant-numeric: lining-nums proportional-nums;
-    font-family: StratosSkyeng;
+    font-family: StratosSkyeng, sans-serif;
     font-size: 40px;
     font-style: normal;
     font-weight: 400;

@@ -1,4 +1,4 @@
-import MyCourses from '../MyCourses';
+import MyCourses from '../../dataArrays/MyCourses';
 import ButtonForTransition from '../UI/ButtonForTransition/ButtonForTransition';
 import * as S from './ItemMyCourses.styled';
 

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import * as S from './training.style';
+import * as S from './Training.style';
 import {
     ProgressBarFirst,
     ProgressBarSecond,
@@ -20,7 +20,7 @@ export default function Training() {
                 </Link>
                 <S.Profile>
                     <img src="../img/icon/Ellipse 376.svg" alt="" />
-                    <S.Name>Серге</S.Name>
+                    <S.Name>Сергей</S.Name>
                     <S.SpanArrow>
                         <img src="../img/icon/Arrow.svg" alt="" />
                     </S.SpanArrow>
