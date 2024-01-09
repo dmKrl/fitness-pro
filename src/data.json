@@ -92,6 +92,30 @@
             "workouts": ["gh7bd5", "hwsut5", "n18r8v", "dq9rzo", "rr70ie"]
         }
     },
+    "cards": {
+        "paths": [
+            {
+                "id": 1,
+                "image": "/image/yoga.png"
+            },
+            {
+                "id": 2,
+                "image": "/image/stretching.png"
+            },
+            {
+                "id": 3,
+                "image": "/image/dance fitness.png"
+            },
+            {
+                "id": 4,
+                "image": "/image/step aerobics.png"
+            },
+            {
+                "id": 5,
+                "image": "/image/bodyflex.png"
+            }
+        ]
+    },
     "workouts": {
         "17oz5f": {
             "_id": "17oz5f",

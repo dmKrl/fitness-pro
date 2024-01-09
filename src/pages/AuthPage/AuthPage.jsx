@@ -23,7 +23,7 @@ function AuthPage() {
             <S.ModalForm>
                 <Link to="/">
                     <S.ModalLogo>
-                        <S.ModalLogoImage src="/img/logo.png" alt="logo" />
+                        <S.ModalLogoImage src="/image/logo.png" alt="logo" />
                     </S.ModalLogo>
                 </Link>
                 {isLoginMode ? (

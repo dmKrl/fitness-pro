@@ -6,7 +6,16 @@ import { db } from './firebase-config';
 
 function App() {
     const [courses, setCourses] = useState({});
-    const coursesCollection = collection(db, 'courses');
+    const coursesCollection = collection(db, 'data');
+
+    // const addTodo = async () => {
+    //     try {
+    //         const docRef = await addDoc(collection(db, 'users'));
+    //         console.log('Document written with ID: ', docRef.id);
+    //     } catch (error) {
+    //         console.error('Error adding document: ', error);
+    //     }
+    // };
 
     const fetchPost = async () => {
         await getDocs(coursesCollection).then((querySnapshot) => {
@@ -20,7 +29,10 @@ function App() {
         });
     };
     useEffect(() => {
-        fetchPost();
+        // addTodo();
+        setTimeout(() => {
+            fetchPost();
+        }, 0);
     }, []);
     console.log(courses);
     return (

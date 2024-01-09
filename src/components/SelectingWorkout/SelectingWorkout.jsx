@@ -12,7 +12,7 @@ export default function SelectingWorkout() {
                                 Утренняя практика
                             </S.NameWorkoutsActiv>
                             <div>
-                                <img src="../img/icon/Accept.svg" alt="" />
+                                <img src="../image/icon/Accept.svg" alt="" />
                             </div>
                         </S.ActivBox>
                         <S.StartWorkoutsActiv>
@@ -25,7 +25,7 @@ export default function SelectingWorkout() {
                                 Красота и здоровье
                             </S.NameWorkoutsActiv>
                             <div>
-                                <img src="../img/icon/Accept.svg" alt="" />
+                                <img src="../image/icon/Accept.svg" alt="" />
                             </div>
                         </S.ActivBox>
                         <S.StartWorkoutsActiv>

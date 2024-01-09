@@ -15,14 +15,14 @@ export default function Training() {
             <S.Header>
                 <Link to="/">
                     <S.Logo>
-                        <img src="../img/logo.png" alt="logo" />
+                        <img src="../image/logo.png" alt="logo" />
                     </S.Logo>
                 </Link>
                 <S.Profile>
-                    <img src="../img/icon/Ellipse 376.svg" alt="" />
+                    <img src="../image/icon/Ellipse 376.svg" alt="" />
                     <S.Name>Сергей</S.Name>
                     <S.SpanArrow>
-                        <img src="../img/icon/Arrow.svg" alt="" />
+                        <img src="../image/icon/Arrow.svg" alt="" />
                     </S.SpanArrow>
                 </S.Profile>
             </S.Header>
@@ -32,7 +32,7 @@ export default function Training() {
                     Красота и здоровье / Йога на каждый день / 2 день
                 </S.ExercisesForTheDay>
                 <S.Video>
-                    <img src="../img/Group 48096501.jpg" alt="" />
+                    <img src="../image/Group 48096501.jpg" alt="" />
                 </S.Video>
                 <S.Sections>
                     <div>

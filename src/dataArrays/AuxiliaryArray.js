@@ -1,23 +1,23 @@
 const AuxiliaryArray = [
     {
         id: 1,
-        image: '/images/yoga.png',
+        image: '/image/yoga.png',
     },
     {
         id: 2,
-        image: '/images/stretching.png',
+        image: '/image/stretching.png',
     },
     {
         id: 3,
-        image: '/images/dance fitness.png',
+        image: '/image/dance fitness.png',
     },
     {
         id: 4,
-        image: '/images/step aerobics.png',
+        image: '/image/step aerobics.png',
     },
     {
         id: 5,
-        image: '/images/bodyflex.png',
+        image: '/image/bodyflex.png',
     },
 ];
 
