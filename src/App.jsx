@@ -30,9 +30,7 @@ function App() {
     };
     useEffect(() => {
         // addTodo();
-        setTimeout(() => {
-            fetchPost();
-        }, 0);
+        fetchPost();
     }, []);
     console.log(courses);
     return (
