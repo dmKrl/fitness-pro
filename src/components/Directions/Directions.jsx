@@ -1,17 +1,22 @@
+import { useSelector } from 'react-redux';
 import DirectionItem from '../UI/DirectionItem/DirectionItem';
-import data from '../../data.json';
 import * as S from './Directions.style';
+import { selectDataCourses } from '../../redux/slices/dataSlices';
 
 function Directions() {
+    const dataAllCourses = useSelector(selectDataCourses);
+
     return (
         <S.DirectionsContainer>
             <S.TittleDirections>Направления:</S.TittleDirections>
             <S.DirectionList>
-                {data.courses.ab1c3f.directions.map((direction) => (
-                    <li>
-                        <DirectionItem text={direction} />
-                    </li>
-                ))}
+                {dataAllCourses?.dataCourses?.courses?.ab1c3f?.directions?.map(
+                    (direction, index) => (
+                        <li key={index}>
+                            <DirectionItem text={direction} key={index} />
+                        </li>
+                    ),
+                )}
             </S.DirectionList>
         </S.DirectionsContainer>
     );

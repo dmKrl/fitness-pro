@@ -14,7 +14,6 @@ export const BannerTitle = styled.h1`
     font-size: 64px;
     font-style: normal;
     font-weight: 400;
-    font-family: 'StratosSkyeng', sans-serif;
     line-height: 72px;
     letter-spacing: -0.8px;
 `;
