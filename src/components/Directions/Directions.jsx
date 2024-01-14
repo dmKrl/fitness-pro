@@ -1,15 +1,14 @@
 import DirectionItem from '../UI/DirectionItem/DirectionItem';
-import data from '../../data.json';
 import * as S from './Directions.style';
 
-function Directions() {
+function Directions({ chosenCourse }) {
     return (
         <S.DirectionsContainer>
             <S.TittleDirections>Направления:</S.TittleDirections>
             <S.DirectionList>
-                {data.courses.ab1c3f.directions.map((direction) => (
-                    <li>
-                        <DirectionItem text={direction} />
+                {chosenCourse?.directions?.map((direction, index) => (
+                    <li key={index}>
+                        <DirectionItem text={direction} key={index} />
                     </li>
                 ))}
             </S.DirectionList>

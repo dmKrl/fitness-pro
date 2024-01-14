@@ -7,7 +7,6 @@ export default styled.button`
     background: var(--Palette-Purple-90, #580ea2);
     color: #fff;
     font-variant-numeric: lining-nums proportional-nums;
-    font-family: StratosSkyeng;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;

@@ -6,7 +6,6 @@ export const DirectionsContainer = styled.div`
 export const TittleDirections = styled.h2`
     color: #000;
     font-variant-numeric: lining-nums proportional-nums;
-    font-family: StratosSkyeng;
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
@@ -20,7 +19,6 @@ export const DirectionList = styled.ul`
     margin-top: 22px;
     grid-template-columns: repeat(2, 3fr);
     font-variant-numeric: lining-nums proportional-nums;
-    font-family: StratosSkyeng;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;

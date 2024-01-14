@@ -1,40 +1,38 @@
 import { collection, getDocs } from 'firebase/firestore';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import GlobalStyle from './GlobalStyle.styles';
 import AppRoutes from './routes';
 import { db } from './firebase-config';
+import { setDataCourses } from './redux/slices/dataSlices';
 
 function App() {
-    const [courses, setCourses] = useState({});
-    const coursesCollection = collection(db, 'data');
-
+    const dispatch = useDispatch();
     // const addTodo = async () => {
     //     try {
-    //         const docRef = await addDoc(collection(db, 'users'));
+    //         const docRef = await addDoc(collection(db, 'data'), {
+    //             data,
+    //         });
     //         console.log('Document written with ID: ', docRef.id);
     //     } catch (error) {
     //         console.error('Error adding document: ', error);
     //     }
     // };
 
-    const fetchPost = async () => {
-        await getDocs(coursesCollection).then((querySnapshot) => {
-            console.log(querySnapshot);
-            const newData = querySnapshot.docs.map((doc) => ({
+    const coursesCollection = collection(db, 'data');
+
+    const fetchDataCourses = async () => {
+        await getDocs(coursesCollection).then((arrayCoursesFitting) => {
+            const newData = arrayCoursesFitting.docs.map((doc) => ({
                 ...doc.data(),
-                id: doc.id,
             }));
-            setCourses(newData);
-            console.log(courses, newData);
+            console.log(newData[0]);
+            dispatch(setDataCourses(newData[0]));
         });
     };
     useEffect(() => {
-        // addTodo();
-        setTimeout(() => {
-            fetchPost();
-        }, 0);
+        fetchDataCourses();
     }, []);
-    console.log(courses);
     return (
         <>
             <GlobalStyle />
