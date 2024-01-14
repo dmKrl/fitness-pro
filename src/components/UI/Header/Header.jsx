@@ -1,17 +1,12 @@
 import UserLogo from '../UserLogo/UserLogo';
 import Logo from '../Logo/Logo';
+import * as S from './Header.styled';
 
 export default function Header() {
     return (
-        <div
-            style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-            }}
-        >
+        <S.Header>
             <Logo />
             <UserLogo />
-        </div>
+        </S.Header>
     );
 }
