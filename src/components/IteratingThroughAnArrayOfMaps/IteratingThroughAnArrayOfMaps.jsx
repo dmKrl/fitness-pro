@@ -25,7 +25,7 @@ function IteratingThroughAnArrayOfMaps() {
                 <S.Cards>
                     {dataCourses?.cards?.paths?.map((card) => (
                         <div key={card.id}>
-                            <Link to="/description-course">
+                            <Link to={`/description-course/${card.id}`}>
                                 <S.ImgCard src={card.image} alt="Карта курса" />
                             </Link>
                         </div>
