@@ -8,8 +8,8 @@ export const LogoItemLink = styled.a`
 `;
 
 export const ImgLogo = styled.img`
-    width: 29px;
-    height: 20px;
+    width: 223px;
+    height: 35px;
 `;
 
 export const ItemH2 = styled.h2`
