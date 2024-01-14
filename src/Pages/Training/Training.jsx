@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import * as S from './Training.style';
 import {
     ProgressBarFirst,
@@ -8,31 +8,33 @@ import {
 import MyResults from '../../components/MyProgress/MyProgress';
 import SelectingWorkout from '../../components/SelectingWorkout/SelectingWorkout';
 import AcceptProgress from '../../components/AcceptProgress/AcceptProgress';
+import Header from '../../components/UI/Header/Header';
 
 export default function Training() {
     return (
         <S.Container>
-            <S.Header>
+            {/* <S.Header>
                 <Link to="/">
                     <S.Logo>
-                        <img src="../img/logo.png" alt="logo" />
+                        <img src="../image/logo.png" alt="logo" />
                     </S.Logo>
                 </Link>
                 <S.Profile>
-                    <img src="../img/icon/Ellipse 376.svg" alt="" />
+                    <img src="../image/icon/Ellipse 376.svg" alt="" />
                     <S.Name>Сергей</S.Name>
                     <S.SpanArrow>
-                        <img src="../img/icon/Arrow.svg" alt="" />
+                        <img src="../image/icon/Arrow.svg" alt="" />
                     </S.SpanArrow>
                 </S.Profile>
-            </S.Header>
+            </S.Header> */}
+            <Header />
             <S.MainTraining>
                 <S.LessonName>Йога</S.LessonName>
                 <S.ExercisesForTheDay>
                     Красота и здоровье / Йога на каждый день / 2 день
                 </S.ExercisesForTheDay>
                 <S.Video>
-                    <img src="../img/Group 48096501.jpg" alt="" />
+                    <img src="../image/Group 48096501.jpg" alt="" />
                 </S.Video>
                 <S.Sections>
                     <div>

@@ -1,3 +1,9 @@
+import {
+    getAuth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+} from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import * as S from './AuthPage.styles';
@@ -9,10 +15,50 @@ function AuthPage() {
     const [repeatPassword, setRepeatPassword] = useState('');
     const [offButton] = useState(false);
     const [isLoginMode, setIsLoginMode] = useState(false);
+    const navigate = useNavigate();
 
     const handleIsLoginMode = () => {
         setIsLoginMode(true);
     };
+
+    const auth = getAuth();
+    function fetchUsersRegistration() {
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed up
+                const user = userCredential.user;
+                localStorage.setItem('user', user.email);
+                console.log(localStorage.getItem('user'));
+                console.log(user);
+                navigate('/profile');
+                // ...
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // ..
+                console.log(errorCode);
+                console.log(errorMessage);
+            });
+    }
+
+    function fetchUsersLogin() {
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in
+                const user = userCredential.user;
+                localStorage.setItem('user', user.email);
+                console.log(user);
+                navigate('/profile');
+                // ...
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorCode);
+                console.log(errorMessage);
+            });
+    }
 
     useEffect(() => {
         setError(null);
@@ -23,7 +69,7 @@ function AuthPage() {
             <S.ModalForm>
                 <Link to="/">
                     <S.ModalLogo>
-                        <S.ModalLogoImage src="/img/logo.png" alt="logo" />
+                        <S.ModalLogoImage src="/image/logo.png" alt="logo" />
                     </S.ModalLogo>
                 </Link>
                 {isLoginMode ? (
@@ -58,7 +104,7 @@ function AuthPage() {
                             />
                         </S.Inputs>
                         {error && <S.Error>{error}</S.Error>}
-                        <S.Buttons>
+                        <S.Buttons onClick={fetchUsersRegistration}>
                             <S.PrimaryButton>
                                 {offButton
                                     ? 'Загружаем информацию...'
@@ -90,7 +136,7 @@ function AuthPage() {
                         </S.Inputs>
                         {error && <S.Error>{error}</S.Error>}
                         <S.Buttons>
-                            <S.PrimaryButton>
+                            <S.PrimaryButton onClick={fetchUsersLogin}>
                                 {offButton
                                     ? 'Загружаем информацию...'
                                     : 'Войти'}

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ContainerDescription = styled.div`
-    margin: 0px auto;
+    margin: 30px auto;
     color: #000;
     max-width: 1160px;
     font-variant-numeric: lining-nums proportional-nums;

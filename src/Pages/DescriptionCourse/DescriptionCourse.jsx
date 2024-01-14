@@ -1,15 +1,13 @@
-import BannerCourse from '../../components/BannerCourse/BannerCourse';
-import Logo from '../../components/UI/Logo/Logo';
 import Fitting from '../../components/Fitting/Fitting';
 import Directions from '../../components/Directions/Directions';
 import BannerConnection from '../../components/BannerConnection/BannerConnection';
 import * as S from './DescriptionCourse.style';
+import Header from '../../components/UI/Header/Header';
 
 function DescriptionCourse() {
     return (
         <S.ContainerDescription>
-            <Logo />
-            <BannerCourse />
+            <Header />
             <Fitting />
             <Directions />
             <S.TextDescriptionCourse>

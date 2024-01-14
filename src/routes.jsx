@@ -4,15 +4,18 @@ import AuthPage from './pages/AuthPage/AuthPage';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 import DescriptionCourse from './pages/DescriptionCourse/DescriptionCourse';
 import Training from './pages/Training/Training';
+import { ProtectedRoute } from './components/protected-route/ProtectedRoute';
 
 function AppRoutes() {
     return (
         <Routes>
             <Route path="/auth" element={<AuthPage />} />
             <Route path="/" element={<MainPage />} />
-            <Route path="/profile" element={<ProfilePage />} />
-            <Route path="/training" element={<Training />} />
             <Route path="/description-course" element={<DescriptionCourse />} />
+            <Route element={<ProtectedRoute />}>
+                <Route path="/profile" element={<ProfilePage />} />
+                <Route path="/training" element={<Training />} />
+            </Route>
         </Routes>
     );
 }

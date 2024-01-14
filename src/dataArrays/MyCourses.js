@@ -1,15 +1,15 @@
 const MyCourses = [
     {
         id: 1,
-        image: '/images/yoga.png',
+        image: '/image/yoga.png',
     },
     {
         id: 2,
-        image: '/images/stretching.png',
+        image: '/image/stretching.png',
     },
     {
         id: 5,
-        image: '/images/bodyflex.png',
+        image: '/image/bodyflex.png',
     },
 ];
 

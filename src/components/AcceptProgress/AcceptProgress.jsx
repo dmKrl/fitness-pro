@@ -7,7 +7,7 @@ export default function AcceptProgress() {
                 <S.TextCounted>Ваш прогресс засчитан!</S.TextCounted>
             </S.TextBox>
             <div>
-                <img src="../img/icon/Hand.svg" alt="" />
+                <img src="../image/icon/Hand.svg" alt="" />
             </div>
         </S.AcceptBox>
     );
