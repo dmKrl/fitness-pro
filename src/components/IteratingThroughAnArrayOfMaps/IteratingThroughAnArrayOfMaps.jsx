@@ -7,7 +7,7 @@ function IteratingThroughAnArrayOfMaps() {
         <S.Cards className="cards">
             {AuxiliaryArray.map((card) => (
                 <div key={card.id}>
-                    <Link to="/">
+                    <Link to={`/description-course/${card.id}`}>
                         <S.ImgCard src={card.image} alt="Карта курса" />
                     </Link>
                 </div>

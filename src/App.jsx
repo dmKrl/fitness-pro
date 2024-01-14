@@ -8,10 +8,11 @@ import { setDataCourses } from './redux/slices/dataSlices';
 
 function App() {
     const dispatch = useDispatch();
-    console.log(process.env.REACT_APP_API_KEY);
     // const addTodo = async () => {
     //     try {
-    //         const docRef = await addDoc(collection(db, 'users'));
+    //         const docRef = await addDoc(collection(db, 'data'), {
+    //             data,
+    //         });
     //         console.log('Document written with ID: ', docRef.id);
     //     } catch (error) {
     //         console.error('Error adding document: ', error);

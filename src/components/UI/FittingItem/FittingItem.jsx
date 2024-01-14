@@ -1,7 +1,6 @@
 import * as S from '../../Fitting/Fitting.style';
 
 function FittingItem({ fit }) {
-    console.log(fit);
     return (
         <S.BlockFittingItem>
             <S.FittingItemText>{fit.text}.</S.FittingItemText>
