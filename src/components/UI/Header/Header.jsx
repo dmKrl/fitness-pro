@@ -1,5 +1,5 @@
-import UserLogo from '../UI/UserLogo/UserLogo';
-import Logo from '../UI/Logo/Logo';
+import UserLogo from '../UserLogo/UserLogo';
+import Logo from '../Logo/Logo';
 
 export default function Header() {
     return (
