@@ -1,23 +1,24 @@
-import { collection, getDocs } from 'firebase/firestore';
+import { addDoc, collection, getDocs } from 'firebase/firestore';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import GlobalStyle from './GlobalStyle.styles';
 import AppRoutes from './routes';
 import { db } from './firebase-config';
 import { setDataCourses } from './redux/slices/dataSlices';
+import data from './data.json';
 
 function App() {
     const dispatch = useDispatch();
-    // const addTodo = async () => {
-    //     try {
-    //         const docRef = await addDoc(collection(db, 'data'), {
-    //             data,
-    //         });
-    //         console.log('Document written with ID: ', docRef.id);
-    //     } catch (error) {
-    //         console.error('Error adding document: ', error);
-    //     }
-    // };
+    const addTodo = async () => {
+        try {
+            const docRef = await addDoc(collection(db, 'data'), {
+                data,
+            });
+            console.log('Document written with ID: ', docRef.id);
+        } catch (error) {
+            console.error('Error adding document: ', error);
+        }
+    };
 
     const coursesCollection = collection(db, 'data');
 
@@ -31,6 +32,7 @@ function App() {
         });
     };
     useEffect(() => {
+        addTodo();
         fetchDataCourses();
     }, []);
     return (
