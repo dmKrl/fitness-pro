@@ -5,10 +5,10 @@
 
 ## Команда разработчиков:
 @dm_krl
-@igos
-@Nadya
+@igos1992
+@Nadya163
 @AlexeyIvanoof
-@Victor
+@v-sivozhelezov
 
 
 
