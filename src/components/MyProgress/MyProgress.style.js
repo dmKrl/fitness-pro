@@ -49,6 +49,7 @@ export const QuestionResults = styled.p`
 
 export const AnswerResults = styled.input`
     color: #000;
+    width: 100%;
     ${'' /* color: rgba(208, 206, 206, 1); */}
     font-variant-numeric: lining-nums proportional-nums;
     font-family: StratosSkyeng;

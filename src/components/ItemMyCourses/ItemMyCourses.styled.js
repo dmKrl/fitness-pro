@@ -17,6 +17,19 @@ export const CardCourseHeader = styled.h2`
     margin-bottom: 30px;
 `;
 
+export const CardsSkeleton = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    gap: 40px;
+`;
+
+export const ItemCardSkeleton = styled.div`
+    width: 360px;
+    height: 480px;
+    background-color: #bdbebd;
+    border-radius: 30px;
+`;
+
 export const CardCourse = styled.div`
     box-shadow: rgba(0, 0, 0, 0.1) 5px -5px 16px 6px;
     display: flex;

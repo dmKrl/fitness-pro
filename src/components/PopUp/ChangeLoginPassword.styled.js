@@ -7,7 +7,7 @@ export const PageContainer = styled.div`
     position: absolute;
 `;
 
-export const ModalForm = styled.div`
+export const ModalForm = styled.form`
     --modal-width: 366px;
     --modal-height: 401px;
 
@@ -48,6 +48,10 @@ export const ModalInput = styled.input`
         line-height: 24px;
         color: #d0cece;
     }
+`;
+
+export const FillInTheField = styled.div`
+    color: red;
 `;
 
 export const ModalHeader = styled.h4`
@@ -99,20 +103,23 @@ export const PrimaryButton = styled(Button)`
     :active {
         background: var(--Palette-Purple-100, #271a58);
     }
+    &:disabled {
+        background-color: #303030;
+    }
 `;
 
 export const Buttons = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-top: 60px;
+    margin-top: 30px;
     width: 100%;
 `;
 
 export const Inputs = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 15px;
     width: 100%;
 `;
 

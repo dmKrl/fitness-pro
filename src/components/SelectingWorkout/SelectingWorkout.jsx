@@ -1,22 +1,19 @@
-import { useState } from 'react';
-// import { collection, getDocs } from 'firebase/firestore';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import * as S from './SelectingWorkout.styled';
-// import { db } from '../../firebase-config';
-// import { selectDataCourses } from '../../redux/slices/dataSlices';
-import { selectWorkoutsItemCourse } from '../../redux/slices/workoutsSlices';
+import {
+    selectWorkoutsItemCourse,
+    setWorkoutId,
+} from '../../redux/slices/workoutsSlices';
+import { setShowWorkout } from '../../redux/slices/progressSlice';
 
-export default function SelectingWorkout({ onWorkoutSelect }) {
-    const [selectedWorkout, setSelectedWorkout] = useState(null);
-    // const dataCourses = useSelector(selectDataCourses);
+export default function SelectingWorkout() {
+    const dispatch = useDispatch();
     const workoutItem = useSelector(selectWorkoutsItemCourse);
-    console.log(workoutItem);
-    // const workoutsCollection = collection(db, 'data');
 
     const handleWorkoutClick = (workout) => {
-        setSelectedWorkout(workout);
+        dispatch(setShowWorkout(false));
+        dispatch(setWorkoutId(workout));
         console.log(workout);
-        onWorkoutSelect(workout);
     };
 
     return (
@@ -27,15 +24,13 @@ export default function SelectingWorkout({ onWorkoutSelect }) {
                         <S.ChoiceTraining>Выберите тренировку</S.ChoiceTraining>
                         <S.ListOfWorkouts>
                             <S.ListBox>
-                                {workoutItem?.map((workout) => (
+                                {workoutItem?.map((workout, index) => (
                                     <S.BoxTraining
-                                        key={workout.id}
+                                        key={index}
                                         onClick={() =>
                                             handleWorkoutClick(workout)
                                         }
-                                        active={
-                                            selectedWorkout?.id === workout.id
-                                        }
+                                        active={workoutItem?.id === workout.id}
                                     >
                                         <S.ActivBox>
                                             <S.NameWorkouts>

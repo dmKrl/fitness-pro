@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const MainConteiner = styled.div`
-    padding-left: calc(50% - 580px);
-    padding-right: calc(50% - 580px);
+    margin-top: 30px;
 `;
 
 export const Container = styled.div`
     width: 1440px;
+    margin: 0px auto;
     height: 100%;
     padding: 0px 140px 0px 140px;
 `;

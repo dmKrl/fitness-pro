@@ -10,7 +10,6 @@ function MyProfile(props) {
             <S.MyProfileText>
                 Логин: {localStorage.getItem('user')}
             </S.MyProfileText>
-            <S.MyProfileText>Пароль: XXXXX</S.MyProfileText>
             <S.MyProfileButtons>
                 <ButtonForFetch
                     onClick={() => {

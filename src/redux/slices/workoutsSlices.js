@@ -5,6 +5,7 @@ const initialState = {
     workoutsItem: {
         course: [],
     },
+    workoutId: {},
 };
 
 const workoutsSlice = createSlice({
@@ -14,12 +15,15 @@ const workoutsSlice = createSlice({
         setWorkoutsItem: (state, action) => {
             state.workoutsItem.course = action.payload;
         },
+        setWorkoutId: (state, action) => {
+            state.workoutId = action.payload;
+        },
     },
 });
 
-export const { setWorkoutsItem } = workoutsSlice.actions;
+export const { setWorkoutsItem, setWorkoutId } = workoutsSlice.actions;
 
 export const selectWorkoutsItemCourse = (state) =>
     state.workout.workoutsItem.course;
-
+export const selectWorkoutId = (state) => state.workout.workoutId;
 export default workoutsSlice.reducer;

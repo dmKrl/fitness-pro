@@ -52,6 +52,7 @@ export const MenuList = styled.ul`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    list-style-type: none;
 `;
 
 export const MenuItem = styled.li`

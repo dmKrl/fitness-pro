@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-export default styled(NavLink)`
+export const ButtonStyled = styled(NavLink)`
     padding: 10px 20px;
     border: none;
     border-radius: 46px;
@@ -18,4 +18,8 @@ export default styled(NavLink)`
     &:active {
         background-color: #ebffab;
     }
+`;
+export const ButtonForTrans = styled.button`
+    border: none;
+    background: none;
 `;

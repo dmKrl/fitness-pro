@@ -1,11 +1,16 @@
-import ButtonStyled from './ButtonForTransition.styled';
+import { useDispatch } from 'react-redux';
+import * as S from './ButtonForTransition.styled';
+import { setShowWorkout } from '../../../redux/slices/progressSlice';
 
 function ButtonForTransition(props) {
+    const dispatch = useDispatch();
     return (
-        <ButtonStyled to={`/training/${props.id}`}>
-            {' '}
+        <S.ButtonStyled
+            to={`/training/${props.id}`}
+            onClick={() => dispatch(setShowWorkout(true))}
+        >
             {props.children}
-        </ButtonStyled>
+        </S.ButtonStyled>
     );
 }
 
