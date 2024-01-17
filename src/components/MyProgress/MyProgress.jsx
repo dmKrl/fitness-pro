@@ -20,6 +20,15 @@ export default function MyProgress() {
     };
     console.log(workoutId);
 
+    const handleKeyDown = (e, index) => {
+        const exercise = workoutId.exercises[index];
+        const minValue = 0;
+        const maxValue = exercise.quantity;
+        const newValue = parseInt(e.target.value + e.key, 10);
+        if (newValue < minValue || newValue > maxValue) {
+            e.preventDefault();
+        }
+    };
     // const changeProgressForUser = async (userId) => {
     //     try {
     //         await setDoc(doc(db, 'userProgress', userId), {
@@ -71,6 +80,12 @@ export default function MyProgress() {
                                                         placeholder="Введите значение"
                                                         value={
                                                             inputValue[index]
+                                                        }
+                                                        onKeyDown={(e) =>
+                                                            handleKeyDown(
+                                                                e,
+                                                                index,
+                                                            )
                                                         }
                                                         onChange={(e) =>
                                                             handleInputChange(
