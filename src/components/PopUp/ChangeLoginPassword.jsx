@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { getAuth, updatePassword, updateProfile } from 'firebase/auth';
 import { useForm } from 'react-hook-form';
 import * as S from './ChangeLoginPassword.styled';
-import Logo from '../UI/Logo/LogoMyProfile';
+import Logo from '../UI/Logo/Logo';
 
 export default function ChangeLoginPassword(props) {
     const { isActivePopUpPassword, isActivePopUpLogin } = props;

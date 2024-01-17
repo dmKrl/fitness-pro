@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ChoiceTrainingBox = styled.div`
     width: 444px;
-    height: 626px;
+    max-height: 626px;
     border-radius: 12px;
     background: rgba(255, 255, 255, 1);
     display: flex;
@@ -22,7 +22,7 @@ export const ChoiceTraining = styled.h2`
 
 export const ListOfWorkouts = styled.div`
     width: 307px;
-    height: 455px;
+    max-height: 455px;
     margin-top: 40px;
     overflow-y: scroll;
     /* width */
@@ -45,7 +45,7 @@ export const ListOfWorkouts = styled.div`
 
 export const ListBox = styled.div`
     width: 278px;
-    height: 452px;
+    max-height: 452px;
     display: flex;
     flex-direction: column;
     gap: 12px;

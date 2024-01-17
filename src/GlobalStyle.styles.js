@@ -40,7 +40,7 @@ body {
   width: 100%;
   height: 100%;
   font-family: 'StratosSkyeng', sans-serif;
-  color: #black;
+  color: black;
   background-color: #fff;
   scroll-behavior: smooth;
 }
