@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import * as S from './AuthPage.styles';
 import { db } from '../../firebase-config';
+import data from '../../data.json';
 
 function AuthPage() {
     const [error, setError] = useState(null);
@@ -22,11 +23,11 @@ function AuthPage() {
     const [isLoginMode, setIsLoginMode] = useState(false);
     const auth = getAuth();
 
+    const { myWorkouts } = data;
     function setDisplayName({ user }) {
         updateProfile(auth.currentUser, {
             displayName: userName,
-        }).then((data) => {
-            console.log(data);
+        }).then(() => {
             localStorage.setItem('user', user.displayName);
             navigate('/profile');
         });
@@ -44,30 +45,9 @@ function AuthPage() {
         mode: 'onBlur',
     });
 
-    const addTodo = async (userId) => {
+    const addProgressForUser = async (userId) => {
         try {
-            await setDoc(doc(db, 'userProgress', userId), {
-                // yoga: {
-                //     day: {
-                //         exercises1: {
-                //             quantity:
-                //         }
-                //         exercises2:
-                //         exercises3:
-                //         exercises4:
-                //         exercises5:
-                //     }
-
-                // },
-                stretching: {
-                    userId: '222',
-                    progressUser: '222',
-                },
-                bodyflex: {
-                    userId: '222',
-                    progressUser: '222',
-                },
-            });
+            await setDoc(doc(db, 'userProgress', userId), { myWorkouts });
             // console.log('Document written with ID: ', docRef.id);
         } catch (err) {
             console.error('Error adding document: ', error);
@@ -102,19 +82,32 @@ function AuthPage() {
                     const { user } = userCredential;
                     setDisplayName({ user });
                     const userUid = user.uid;
-                    console.log(userUid);
-                    addTodo(userUid);
+                    addProgressForUser(userUid);
                 })
                 .catch((err) => {
-                    const errorCode = err.code;
-                    const errorMessage = err.message;
-                    console.log(errorCode);
-                    console.log(errorMessage);
+                    if (
+                        err.message ===
+                        'Firebase: Error (auth/email-already-in-use).'
+                    ) {
+                        return setError('Такое email уже зарегестрирован');
+                    }
+                    if (
+                        err.message ===
+                        'Firebase: Password should be at least 6 characters (auth/weak-password).'
+                    ) {
+                        return setError(
+                            'Пароль должен содержать не менее 6 символов',
+                        );
+                    }
+                    return err;
+                    // const errorCode = err.code;
+                    // const errorMessage = err.message;
+                    // console.log(errorCode);
+                    // console.log(errorMessage);
                 })
                 .finally(() => {
                     setOffButton(false);
                 });
-            setOffButton(true);
         } else if (!isLoginMode) {
             signInWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
@@ -124,6 +117,12 @@ function AuthPage() {
                     navigate('/profile');
                 })
                 .catch((err) => {
+                    if (
+                        err.message ===
+                        'Firebase: Error (auth/invalid-login-credentials).'
+                    ) {
+                        setError('Неверные учетные данные для входа');
+                    }
                     const errorCode = err.code;
                     const errorMessage = err.message;
                     console.log(errorCode);
@@ -132,7 +131,6 @@ function AuthPage() {
                 .finally(() => {
                     setOffButton(false);
                 });
-            setOffButton(true);
         }
     };
 
@@ -267,11 +265,7 @@ function AuthPage() {
                         </S.Inputs>
                         {error && <S.Error>{error}</S.Error>}
                         <S.Buttons>
-                            <S.PrimaryButton
-                                type="submit"
-                                // onClick={fetchUsersLogin}
-                                disabled={offButton}
-                            >
+                            <S.PrimaryButton type="submit" disabled={offButton}>
                                 {offButton
                                     ? 'Загружаем информацию...'
                                     : 'Войти'}

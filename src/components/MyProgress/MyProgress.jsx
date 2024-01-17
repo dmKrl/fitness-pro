@@ -1,62 +1,55 @@
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+// import { doc, setDoc } from 'firebase/firestore';
 import * as S from './MyProgress.style';
 import AcceptProgress from '../AcceptProgress/AcceptProgress';
+import { selectWorkoutId } from '../../redux/slices/workoutsSlices';
+import { setResultss, setShowModal } from '../../redux/slices/progressSlice';
+// import { db } from '../../firebase-config';
 
-export default function MyProgress({
-    selectedWorkoutId,
-    setShowModal,
-    setProgress,
-}) {
+export default function MyProgress() {
     const [isSendResults, setIsSendResults] = useState(false);
-    const [inputValue, setInputValue] = useState({});
-    const [isFormValid, setIsFormValid] = useState(false);
-    const [errorMessage, setErrorMessage] = useState(null);
-
-    const validateForm = () => {
-        const formValid = Object.values(inputValue).every(
-            (value) => value !== '',
-        );
-        setIsFormValid(formValid);
-    };
+    const [inputValue, setInputValue] = useState([]);
+    const workoutId = useSelector(selectWorkoutId);
+    const dispatch = useDispatch();
 
     const handleInputChange = (index, e) => {
-        setInputValue((prevInputValue) => ({
-            ...prevInputValue,
-            [index]: e.target.value,
-        }));
-        validateForm();
+        const newInputValue = [...inputValue];
+        newInputValue[index] = e.target.value;
+        setInputValue(newInputValue);
     };
+    console.log(workoutId);
+
+    // const changeProgressForUser = async (userId) => {
+    //     try {
+    //         await setDoc(doc(db, 'userProgress', userId), {
+    //             bodyflex:
+    //          });
+    //         // console.log('Document written with ID: ', docRef.id);
+    //     } catch (err) {
+    //         console.error('Error adding document: ', err);
+    //     }
+    // };
 
     const handleSendResult = () => {
-        if (!isFormValid) {
-            setErrorMessage('Пожалуйста, заполните все поля');
-            return;
-        }
-        const newProgress = Object.values(inputValue).map((value, index) => {
-            const exercise = selectedWorkoutId.exercises[index];
+        const newProgress = inputValue.map((value, index) => {
+            const exercise = workoutId.exercises[index];
             const progress =
                 value === 0 ? 0 : Math.round((value / exercise.quantity) * 100);
             return progress;
         });
-        setProgress(newProgress);
         console.log(newProgress);
-        setInputValue({});
+
+        dispatch(setResultss(newProgress));
+        console.log(newProgress);
+        setInputValue([]);
         setIsSendResults(true);
         setTimeout(() => {
             setIsSendResults(false);
-            setShowModal(false);
+            dispatch(setShowModal(false));
         }, 2000);
     };
 
-    const handleKeyPress = (e) => {
-        const { value } = e.target;
-        const { max } = e.target.attributes;
-        if (value > max.value) {
-            e.preventDefault();
-        }
-    };
-
-    console.log(isSendResults);
     return (
         <S.Background>
             <S.SelectingWorkoutBox>
@@ -67,20 +60,17 @@ export default function MyProgress({
                                 <S.MyResultsText>Мой прогресс</S.MyResultsText>
                                 <S.QuestionBox>
                                     <S.QuestionItems>
-                                        {selectedWorkoutId?.exercises.map(
+                                        {workoutId.exercises?.map(
                                             (exercise, index) => (
-                                                <>
-                                                    <S.QuestionResults
-                                                        key={exercise.id}
-                                                    >
+                                                <div key={index}>
+                                                    <S.QuestionResults>
                                                         {exercise.question}
                                                     </S.QuestionResults>
                                                     <S.AnswerResults
                                                         type="number"
                                                         placeholder="Введите значение"
                                                         value={
-                                                            inputValue[index] ||
-                                                            ''
+                                                            inputValue[index]
                                                         }
                                                         onChange={(e) =>
                                                             handleInputChange(
@@ -88,18 +78,12 @@ export default function MyProgress({
                                                                 e,
                                                             )
                                                         }
-                                                        onKeyDown={
-                                                            handleKeyPress
-                                                        }
                                                         min={0}
                                                         max={exercise.quantity}
                                                     />
                                                     <S.CreateLine />
-                                                </>
+                                                </div>
                                             ),
-                                        )}
-                                        {errorMessage && (
-                                            <S.Error>{errorMessage}</S.Error>
                                         )}
                                     </S.QuestionItems>
                                 </S.QuestionBox>

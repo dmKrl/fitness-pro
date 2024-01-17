@@ -75,6 +75,7 @@ export const MenuList = styled.ul`
     padding: 18px 0 10px 0;
     display: flex;
     flex-direction: column;
+    list-style-type: none;
     align-items: flex-start;
 `;
 

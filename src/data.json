@@ -591,5 +591,54 @@
             "id": 5,
             "image": "/image/bodyflex.png"
         }
-    ]
+    ],
+    "myWorkouts": {
+        "yoga": [
+            { "id": 10, "exercises": [] },
+            {
+                "id": 11,
+                "exercises": []
+            },
+            {
+                "id": 12,
+                "exercises": []
+            },
+            {
+                "id": 13,
+                "exercises": []
+            },
+            {
+                "id": 14,
+                "exercises": []
+            }
+        ],
+        "stretching": [
+            {
+                "id": 15,
+                "exercises": []
+            },
+            {
+                "id": 16,
+                "exercises": []
+            },
+            {
+                "id": 17,
+                "exercises": []
+            }
+        ],
+        "bodyflex": [
+            {
+                "id": 18,
+                "exercises": []
+            },
+            {
+                "id": 19,
+                "exercises": []
+            },
+            {
+                "id": 20,
+                "exercises": []
+            }
+        ]
+    }
 }
