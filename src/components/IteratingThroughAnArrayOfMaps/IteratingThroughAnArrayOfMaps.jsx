@@ -6,10 +6,9 @@ import { selectDataCourses } from '../../redux/slices/dataSlices';
 
 function IteratingThroughAnArrayOfMaps() {
     const dataCourses = useSelector(selectDataCourses);
-    console.log(dataCourses);
 
     return (
-        <div>
+        <>
             {dataCourses?.length === 0 ? (
                 <S.CardsSkeleton>
                     {AuxiliaryArray.map((card) => (
@@ -32,7 +31,7 @@ function IteratingThroughAnArrayOfMaps() {
                     ))}
                 </S.Cards>
             )}
-        </div>
+        </>
     );
 }
 

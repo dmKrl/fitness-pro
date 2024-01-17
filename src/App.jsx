@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { setDataCourses } from './redux/slices/dataSlices';
 import GlobalStyle from './GlobalStyle.styles';
 import AppRoutes from './routes';
+// import data from './data.json';
 import { db } from './firebase-config';
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
 
     // const addTodo = async () => {
     //     try {
-    //         const docRef = await addDoc(collection(db, 'users'));
+    //         const docRef = await addDoc(collection(db, 'data'), { data });
     //         console.log('Document written with ID: ', docRef.id);
     //     } catch (error) {
     //         console.error('Error adding document: ', error);

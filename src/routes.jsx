@@ -17,7 +17,7 @@ function AppRoutes() {
             />
             <Route element={<ProtectedRoute />}>
                 <Route path="/profile" element={<ProfilePage />} />
-                <Route path="/training" element={<Training />} />
+                <Route path="/training/:id" element={<Training />} />
             </Route>
         </Routes>
     );

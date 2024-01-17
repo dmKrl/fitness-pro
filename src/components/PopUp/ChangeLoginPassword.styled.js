@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
 export const PageContainer = styled.div`
-    max-width: 100%;
-    height: 100vh;
-    background-color: #ccc;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(119 119 119 / 37%);
+    position: absolute;
 `;
 
-export const ModalForm = styled.form`
+export const ModalForm = styled.div`
     --modal-width: 366px;
-    --modal-height: 439px;
+    --modal-height: 401px;
 
     position: absolute;
     left: calc(50% - (var(--modal-width) / 2));
@@ -28,12 +29,13 @@ export const ModalLogo = styled.div`
     background-color: transparent;
 `;
 
-export const ModalLogoImage = styled.img`
-    width: 222px;
-    height: 36px;
-`;
-
 export const ModalInput = styled.input`
+    font-family: 'StratosSkyeng', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.05000000074505806px;
+    text-align: left;
     width: 100%;
     border: none;
     border-bottom: 1px solid #d0cece;
@@ -48,8 +50,13 @@ export const ModalInput = styled.input`
     }
 `;
 
-export const FillInTheField = styled.div`
-    color: red;
+export const ModalHeader = styled.h4`
+    font-family: 'StratosSkyeng', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.05000000074505806px;
+    text-align: left;
 `;
 
 const Button = styled.button`
@@ -60,7 +67,7 @@ const Button = styled.button`
 
     width: 278px;
     height: 52px;
-    border-radius: 20px;
+    border-radius: 6px;
     border: none;
     font-style: normal;
     font-weight: 400;
@@ -73,32 +80,24 @@ const Button = styled.button`
 `;
 
 export const PrimaryButton = styled(Button)`
-    color: #ffffff;
-    background-color: #580ea2;
-    &:hover {
-        background-color: #3f007d;
+    height: 52px;
+    width: 278px;
+    border: none;
+    border-radius: 46px;
+    background: var(--Palette-Purple-90, #580ea2);
+    color: #fff;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: 'StratosSkyeng', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 133.333% */
+    letter-spacing: -0.05px;
+    :hover {
+        background: #3f007d;
     }
-
-    &:active {
-        background-color: #271a58;
-    }
-
-    &:disabled {
-        background-color: #303030;
-    }
-`;
-
-export const ButtonTwo = styled(Button)`
-    color: #000000;
-    background-color: transparent;
-    border: 1px solid #d0cece;
-
-    &:hover {
-        background-color: #f4f5f6;
-    }
-
-    &:active {
-        background-color: #d9d9d9;
+    :active {
+        background: var(--Palette-Purple-100, #271a58);
     }
 `;
 
@@ -109,24 +108,11 @@ export const Buttons = styled.div`
     margin-top: 60px;
     width: 100%;
 `;
-export const SecondaryButton = styled(Buttons)`
-    color: #000000;
-    background-color: transparent;
-    border: 1px solid #d0cece;
-
-    &:hover {
-        background-color: #f4f5f6;
-    }
-
-    &:active {
-        background-color: #d9d9d9;
-    }
-`;
 
 export const Inputs = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     width: 100%;
 `;
 

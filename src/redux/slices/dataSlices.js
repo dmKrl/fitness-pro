@@ -2,7 +2,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    dataCourses: {},
+    dataCourses: [],
 };
 
 const dataSlice = createSlice({

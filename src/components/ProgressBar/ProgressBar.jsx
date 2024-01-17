@@ -1,31 +1,22 @@
 import * as S from './ProgressBar.style';
 
-export function ProgressBarFirst({ percent }) {
+export default function ProgressBarFirst({ percent }) {
+    const getColor = () => {
+        if (percent < 30) {
+            return 'rgba(255, 109, 0, 1)';
+        }
+        if (percent < 60) {
+            return 'rgba(154, 72, 241, 1)';
+        }
+        return 'rgba(86, 94, 239, 1)';
+    };
     return (
         <S.ProgressBarFirst>
-            <S.CompletedProgressFirst style={{ width: `${percent}%` }}>
+            <S.CompletedProgressFirst
+                style={{ width: `${percent}%`, background: getColor(percent) }}
+            >
                 <S.Percent>{percent}%</S.Percent>
             </S.CompletedProgressFirst>
         </S.ProgressBarFirst>
-    );
-}
-
-export function ProgressBarSecond({ percent }) {
-    return (
-        <S.ProgressBarSecond>
-            <S.CompletedProgressSecond style={{ width: `${percent}%` }}>
-                <S.Percent>{percent}%</S.Percent>
-            </S.CompletedProgressSecond>
-        </S.ProgressBarSecond>
-    );
-}
-
-export function ProgressBarThird({ percent }) {
-    return (
-        <S.ProgressBarThird>
-            <S.CompletedProgressThird style={{ width: `${percent}%` }}>
-                <S.Percent>{percent}%</S.Percent>
-            </S.CompletedProgressThird>
-        </S.ProgressBarThird>
     );
 }

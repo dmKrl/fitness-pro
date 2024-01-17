@@ -51,7 +51,7 @@ export const ListBox = styled.div`
     gap: 12px;
 `;
 
-export const BoxTrainingActiv = styled.div`
+export const BoxTrainingActiv = styled.button`
     width: 278px;
     border-radius: 26px;
     border: 1px solid var(--Mint-90, rgba(6, 177, 110, 1));
@@ -61,46 +61,33 @@ export const BoxTrainingActiv = styled.div`
     align-items: center;
 `;
 
-export const BoxTraining = styled.div`
+export const BoxTraining = styled.button`
     width: 278px;
     border-radius: 26px;
     border: 1px solid var(--Mint-90, rgba(0, 0, 0, 1));
+    background-color: white;
     display: flex;
     flex-direction: column;
     gap: 6px;
     align-items: center;
+    &:hover {
+        width: 278px;
+        border-radius: 26px;
+        border: 1px solid var(--Mint-90, rgba(6, 177, 110, 1));
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        align-items: center;
+    }
 `;
 
 export const ActivBox = styled.div`
     margin-top: 11.5px;
+    background-color: width;
     display: flex;
     gap: 7px;
     justify-content: center;
     align-items: center;
-`;
-
-export const NameWorkoutsActiv = styled.p`
-    color: var(--Mint-90, rgba(6, 177, 110, 1));
-    text-align: center;
-    font-variant-numeric: lining-nums proportional-nums;
-    font-family: StratosSkyeng;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 115%; /* 23px */
-    letter-spacing: -0.05px;
-`;
-
-export const StartWorkoutsActiv = styled.div`
-    margin-bottom: 17.5px;
-    color: var(--Mint-90, rgba(6, 177, 110, 1));
-    text-align: center;
-    font-variant-numeric: lining-nums proportional-nums;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px; /* 112.5% */
-    letter-spacing: 0.016px;
 `;
 
 export const NameWorkouts = styled.p`
@@ -114,6 +101,17 @@ export const NameWorkouts = styled.p`
     font-weight: 400;
     line-height: 115%; /* 23px */
     letter-spacing: -0.05px;
+    &:active {
+        color: var(--Mint-90, rgba(6, 177, 110, 1));
+        text-align: center;
+        font-variant-numeric: lining-nums proportional-nums;
+        font-family: StratosSkyeng;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 115%; /* 23px */
+        letter-spacing: -0.05px;
+    }
 `;
 
 export const StartWorkouts = styled.div`
@@ -126,6 +124,41 @@ export const StartWorkouts = styled.div`
     font-weight: 400;
     line-height: 18px; /* 112.5% */
     letter-spacing: 0.016px;
+    &:active {
+        margin-bottom: 17.5px;
+        color: var(--Mint-90, rgba(6, 177, 110, 1));
+        text-align: center;
+        font-variant-numeric: lining-nums proportional-nums;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px; /* 112.5% */
+        letter-spacing: 0.016px;
+    }
+`;
+
+export const Background = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+`;
+
+export const SelectingWorkoutBox = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+`;
+
+export const SelectingWorkoutContainer = styled.div`
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
 `;
 
 // export const  = styled.div``;

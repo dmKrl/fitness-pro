@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const InformationAboutTraining = styled.div`
-    padding-top: 35px;
+    padding-top: 70px;
 `;
 
 export const ItemSpan = styled.span`

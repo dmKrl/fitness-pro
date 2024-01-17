@@ -42,5 +42,7 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'warn',
         'react/no-array-index-key': 0,
         'react/jsx-no-bind': 0,
+        'react/jsx-props-no-spreading': 0,
+        'react/jsx-no-useless-fragment': 0,
     },
 };

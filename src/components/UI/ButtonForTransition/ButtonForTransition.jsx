@@ -1,7 +1,12 @@
 import ButtonStyled from './ButtonForTransition.styled';
 
 function ButtonForTransition(props) {
-    return <ButtonStyled> {props.children}</ButtonStyled>;
+    return (
+        <ButtonStyled to={`/training/${props.id}`}>
+            {' '}
+            {props.children}
+        </ButtonStyled>
+    );
 }
 
 export default ButtonForTransition;

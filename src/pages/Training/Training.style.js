@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+export const MainConteiner = styled.div`
+    padding-left: calc(50% - 580px);
+    padding-right: calc(50% - 580px);
+`;
+
 export const Container = styled.div`
     width: 1440px;
     height: 100%;
@@ -40,7 +45,7 @@ export const Name = styled.span`
 `;
 
 export const MainTraining = styled.div`
-    margin-top: 66px;
+    margin-top: 75px;
 `;
 
 export const LessonName = styled.h1`
@@ -63,6 +68,8 @@ export const ExercisesForTheDay = styled.h2`
 `;
 
 export const Video = styled.div`
+    width: 100%;
+    height: 640px;
     margin-top: 40px;
 `;
 
@@ -70,6 +77,7 @@ export const Sections = styled.div`
     margin-top: 75px;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 `;
 
 export const ExercisesName = styled.h2`
@@ -117,7 +125,7 @@ export const ButtonText = styled.p`
 
 export const TrainingProgress = styled.div`
     width: 638px;
-    height: 336px;
+    height: 100%;
     flex-shrink: 0;
     border-radius: 30px;
     background: rgba(242, 242, 242, 1);
@@ -139,7 +147,7 @@ export const ProgressContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 26px;
-    margin: 41px 55px 0px 44px;
+    margin: 41px 55px 36px 44px;
 `;
 
 export const ExerciseProgress = styled.div`
@@ -147,6 +155,7 @@ export const ExerciseProgress = styled.div`
     align-items: center;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 5px;
 `;
 
 export const ProgressText = styled.div`

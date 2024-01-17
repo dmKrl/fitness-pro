@@ -18,6 +18,7 @@ function DescriptionCourse() {
     const chosenCard = dataAllCourses?.cards?.paths?.find(
         (card) => card.id === Number(params.id),
     );
+
     return (
         <S.ContainerDescription>
             <Header />

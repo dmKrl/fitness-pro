@@ -1,7 +1,5 @@
-import DirectionItemTextList from './DirectionItem.style';
-
 function DirectionItem(props) {
-    return <DirectionItemTextList>{props.text}</DirectionItemTextList>;
+    return <span>{props.text}</span>;
 }
 
 export default DirectionItem;
