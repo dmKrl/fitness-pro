@@ -6,7 +6,7 @@ import Directions from '../../components/Directions/Directions';
 import BannerConnection from '../../components/BannerConnection/BannerConnection';
 import * as S from './DescriptionCourse.style';
 import { selectDataCourses } from '../../redux/slices/dataSlices';
-import Header from '../../components/UI/Header/Header';
+import Logo from '../../components/UI/Logo/Logo';
 
 function DescriptionCourse() {
     const dataAllCourses = useSelector(selectDataCourses);
@@ -21,7 +21,7 @@ function DescriptionCourse() {
 
     return (
         <S.ContainerDescription>
-            <Header />
+            <Logo />
             <BannerCourse chosenCard={chosenCard} />
             <Fitting chosenCourse={chosenCourse} />
             <Directions chosenCourse={chosenCourse} />
