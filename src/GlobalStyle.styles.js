@@ -33,10 +33,6 @@ a:visited {
 button {
   cursor: pointer;
 }
-
-ul li {
-  list-style: none;
-}
 ${FontFaces}
 
 html,

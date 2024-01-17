@@ -10,7 +10,6 @@ export const BannerConnectionText = styled.p`
     color: #000;
 
     font-variant-numeric: lining-nums proportional-nums;
-    font-family: StratosSkyeng;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
@@ -25,5 +24,5 @@ export const BannerImagePhone = styled.img`
     height: 337.526px;
     flex-shrink: 0;
     right: 0;
-    bottom: -15px;
+    bottom: -7px;
 `;

@@ -1,8 +1,8 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-export default styled.button`
-    width: 147px;
-    height: 48px;
+export default styled(NavLink)`
+    padding: 10px 20px;
     border: none;
     border-radius: 46px;
     background-color: #c7e957;

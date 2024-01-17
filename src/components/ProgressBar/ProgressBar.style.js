@@ -14,47 +14,10 @@ export const CompletedProgressFirst = styled.div`
     border-radius: 22px;
     display: flex;
     align-items: center;
-    padding-left: 5px;
+    padding-left: 50px;
     justify-content: flex-end;
-    padding-right: 20px;
-`;
-
-export const ProgressBarSecond = styled.div`
-    width: 278px;
-    height: 36px;
-    background-color: rgba(255, 242, 224, 1);
-    border: 2px solid rgba(255, 109, 0, 1);
-    border-radius: 22px;
-`;
-
-export const CompletedProgressSecond = styled.div`
-    height: 100%;
-    background-color: rgba(255, 109, 0, 1);
-    border-radius: 22px;
-    display: flex;
-    align-items: center;
-    padding-left: 5px;
-    justify-content: flex-end;
-    padding-right: 20px;
-`;
-
-export const ProgressBarThird = styled.div`
-    width: 278px;
-    height: 36px;
-    background-color: rgba(249, 235, 255, 1);
-    border: 2px solid rgba(154, 72, 241, 1);
-    border-radius: 22px;
-`;
-
-export const CompletedProgressThird = styled.div`
-    height: 100%;
-    background-color: rgba(154, 72, 241, 1);
-    border-radius: 22px;
-    display: flex;
-    align-items: center;
-    padding-left: 5px;
-    justify-content: flex-end;
-    padding-right: 20px;
+    padding-right: 10px;
+    overflow: hidden;
 `;
 
 export const Percent = styled.span`

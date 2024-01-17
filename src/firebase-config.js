@@ -2,13 +2,13 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-    apiKey: 'AIzaSyCzLpBfo4Sg035SWee5lucAqMFzjUYBnCA',
-    authDomain: 'fitness-pro-c0bf2.firebaseapp.com',
-    projectId: 'fitness-pro-c0bf2',
-    storageBucket: 'fitness-pro-c0bf2.appspot.com',
-    messagingSenderId: '894223771681',
-    appId: '1:894223771681:web:fec49234a051e718765b60',
-    measurementId: 'G-FWQ17GX9QE',
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID,
+    measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
 
 export const app = initializeApp(firebaseConfig);

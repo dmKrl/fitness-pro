@@ -2,21 +2,36 @@ import { useState } from 'react';
 import MyProfile from '../../components/MyProfile/MyProfile';
 import ItemMyCourse from '../../components/ItemMyCourses/ItemMyCourses';
 import * as S from './ProfilePage.style';
-import Header from '../../components/Header/Header';
-import ChangeLoginPassword from '../../components/PopUp/ChangePassword';
+import Header from '../../components/UI/Header/Header';
+import ChangeLoginPassword from '../../components/PopUp/ChangeLoginPassword';
 
 function ProfilePage() {
-    const [isActivePopUp, setActivePopUp] = useState(false);
+    const [isActivePopUpPassword, setActivePopUpPassword] = useState(false);
+    const [isActivePopUpLogin, setActivePopUpLogin] = useState(false);
 
     return (
         <S.ContainerProfilePage>
             <S.ContainerProfile>
                 <Header />
-                <MyProfile setActivePopUp={setActivePopUp} />
+                <MyProfile
+                    setActivePopUpPassword={setActivePopUpPassword}
+                    setActivePopUpLogin={setActivePopUpLogin}
+                />
                 <ItemMyCourse />
             </S.ContainerProfile>
-            {isActivePopUp === 'changePassword' ? (
-                <ChangeLoginPassword setActivePopUp={setActivePopUp} />
+            {isActivePopUpPassword === 'changePassword' ? (
+                <ChangeLoginPassword
+                    isActivePopUpPassword={isActivePopUpPassword}
+                    setActivePopUpPassword={setActivePopUpPassword}
+                />
+            ) : (
+                ''
+            )}
+            {isActivePopUpLogin === 'changeLogin' ? (
+                <ChangeLoginPassword
+                    isActivePopUpLogin={isActivePopUpLogin}
+                    setActivePopUpLogin={setActivePopUpLogin}
+                />
             ) : (
                 ''
             )}
