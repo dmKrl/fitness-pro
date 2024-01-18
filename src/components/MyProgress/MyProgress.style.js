@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ConteinerResults = styled.div`
+export const ContainerResults = styled.div`
     width: 444px;
     height: 100%;
     border-radius: 12px;
