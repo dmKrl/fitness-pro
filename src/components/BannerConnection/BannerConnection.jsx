@@ -5,7 +5,7 @@ import * as S from './BannerConnection.style';
 function BannerConnection() {
     const navigate = useNavigate();
     function navigateForMainPage() {
-        navigate('/');
+        navigate('/auth');
     }
     return (
         <S.BannerConnectionContainer>
