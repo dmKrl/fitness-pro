@@ -3,7 +3,6 @@ import ReactPlayer from 'react-player';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import * as S from './Training.style';
-import ProgressBarFirst from '../../components/ProgressBar/ProgressBar';
 import MyProgress from '../../components/MyProgress/MyProgress';
 import SelectingWorkout from '../../components/SelectingWorkout/SelectingWorkout';
 import Header from '../../components/UI/Header/Header';
@@ -19,6 +18,7 @@ import {
     setShowModal,
 } from '../../redux/slices/progressSlice';
 import ButtonForFetch from '../../components/UI/ButtonForFetch/ButtonForFetch';
+import TrainingProgress from '../../components/TrainingProgress/TrainingProgress';
 
 export default function Training() {
     const dispatch = useDispatch();
@@ -86,31 +86,10 @@ export default function Training() {
                                         </S.ButtonText>
                                     </ButtonForFetch>
                                 </div>
-                                <S.TrainingProgress>
-                                    <S.MyProgress>
-                                        Мой прогресс по тренировке:
-                                    </S.MyProgress>
-                                    <S.ProgressContainer>
-                                        {workoutId?.exercises?.map(
-                                            (exercise, index) => (
-                                                <S.ExerciseProgress key={index}>
-                                                    <S.NameOfExercises>
-                                                        {exercise.nameProgress}
-                                                    </S.NameOfExercises>
-                                                    <div>
-                                                        <ProgressBarFirst
-                                                            percent={
-                                                                resultWorkout[
-                                                                    index
-                                                                ]
-                                                            }
-                                                        />
-                                                    </div>
-                                                </S.ExerciseProgress>
-                                            ),
-                                        )}
-                                    </S.ProgressContainer>
-                                </S.TrainingProgress>
+                                <TrainingProgress
+                                    workoutId={workoutId}
+                                    resultWorkout={resultWorkout}
+                                />
                             </S.Sections>
                         </S.MainTraining>
                     )}

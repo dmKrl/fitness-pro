@@ -48,27 +48,10 @@ function AuthPage() {
     const addProgressForUser = async (userId) => {
         try {
             await setDoc(doc(db, 'userProgress', userId), { myWorkouts });
-            // console.log('Document written with ID: ', docRef.id);
         } catch (err) {
             console.error('Error adding document: ', error);
         }
     };
-
-    // const addTodo = async (userId) => {
-    //     try {
-    //         const docRef = await addDoc(
-    //             collection(db, 'userProgress'),
-    //             {
-    //                 yoga: 'йога',
-    //                 stretching: 'дичь',
-    //                 bodyflex: 'ерунда',
-    //             },
-    //         );
-    //         console.log('Document written with ID: ', docRef.id);
-    //     } catch (error) {
-    //         console.error('Error adding document: ', error);
-    //     }
-    // };
 
     const onSubmit = () => {
         setOffButton(true);
@@ -78,7 +61,6 @@ function AuthPage() {
         } else if (isLoginMode && password === repeatPassword) {
             createUserWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
-                    console.log(userCredential);
                     const { user } = userCredential;
                     setDisplayName({ user });
                     const userUid = user.uid;
@@ -100,10 +82,6 @@ function AuthPage() {
                         );
                     }
                     return err;
-                    // const errorCode = err.code;
-                    // const errorMessage = err.message;
-                    // console.log(errorCode);
-                    // console.log(errorMessage);
                 })
                 .finally(() => {
                     setOffButton(false);
@@ -113,7 +91,6 @@ function AuthPage() {
                 .then((userCredential) => {
                     const { user } = userCredential;
                     localStorage.setItem('user', user.displayName);
-                    console.log(user);
                     navigate('/profile');
                 })
                 .catch((err) => {
@@ -123,10 +100,6 @@ function AuthPage() {
                     ) {
                         setError('Неверные учетные данные для входа');
                     }
-                    const errorCode = err.code;
-                    const errorMessage = err.message;
-                    console.log(errorCode);
-                    console.log(errorMessage);
                 })
                 .finally(() => {
                     setOffButton(false);
@@ -217,9 +190,7 @@ function AuthPage() {
                             </S.FillInTheField>
                         </S.Inputs>
                         {error && <S.Error>{error}</S.Error>}
-                        <S.Buttons
-                        // onClick={fetchUsersRegistration}
-                        >
+                        <S.Buttons>
                             <S.PrimaryButton type="submit" disabled={offButton}>
                                 {offButton
                                     ? 'Загружаем информацию...'
